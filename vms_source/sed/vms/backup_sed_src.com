@@ -15,7 +15,7 @@ $! This file is created from a template file for the purpose of making it
 $! easier to port Unix code, particularly open source code to VMS.
 $! Therefore permission is freely granted for any use.
 $!
-$! 24-Jun-2014 J. Malmberg
+$! 24-Jan-2014 J. Malmberg
 $!
 $!===========================================================================
 $!

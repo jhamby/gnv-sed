@@ -262,12 +262,9 @@ $  if ref_type .eqs. ".GMO" then ref_skip = 1
 $  if ref_type .eqs. ".PDF" then ref_skip = 1
 $  if ref_type .eqs. ".PNG" then ref_skip = 1
 $  if ref_type .eqs. ".JPG" then ref_skip = 1
-$  if ref_fname .eqs. "inftest.ok" then ref_skip = 1
-$  if ref_fname .eqs. "longsub.in" then ref_skip = 1
-$  if ref_fname .eqs. "longsub.ok" then ref_skip = 1
-$  if ref_fname .eqs. "nasty2.ok" then ref_skip = 1
-$  if ref_fname .eqs. "profile5.awk" then ref_skip = 1
-$  if ref_fname .eqs. "profile5.ok" then ref_skip = 1
+$  if ref_fname .eqs. "madding.good" then ref_skip = 1
+$  if ref_fname .eqs. "madding.inp" then ref_skip = 1
+$  if ref_fname .eqs. "madding.sed" then ref_skip = 1
 $  if ref_fname .eqs. "po.m4" then ref_skip = 1
 $!
 $!

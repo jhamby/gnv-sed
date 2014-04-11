@@ -27,7 +27,7 @@
 #
 # 18-Jan-2014   J. Malmberg	First pass for sed
 ##############################################################################
-crepository = /repo=sys$disk:[coreutils.cxx_repository]
+crepository = /repo=sys$disk:[sed.cxx_repository]
 cnames = /name=(as_i,shor)$(crepository)
 cshow = /show=(EXPA,INC)
 .ifdef __IA64__
@@ -189,7 +189,7 @@ sed_hack_debug.exe : $(sed_hack_objects) [.lib]libsed.olb vms_crtl_init.obj \
 		sys$disk:[.lib]libsed.olb/lib, sys$disk:[]vms_crtl_init.obj
 
 [.lib]libsed.olb : [.lib]libsed($(libsed_objects))
-    @ write sys$output "libcoreutils is up to date"
+    @ write sys$output "libsed is up to date"
 
 
 config.h : [.vms]config_h.com config_vms.h config_h.in configure.
@@ -510,6 +510,8 @@ realclean : clean
 	delete [.lib.selinux]context.h;*
     @ if f$search("[.lib.selinux]selinux.h") .nes. "" then \
 	delete [.lib.selinux]selinux.h;*
+    @ if f$search("[.cxx_repository]cxx$demangler_db.") .nes. "" then \
+        delete [.cxx_repository]cxx$demangler_db.;*
 
 clean :
     @ if f$search("sed.obj") .nes. "" then delete sed.obj;*

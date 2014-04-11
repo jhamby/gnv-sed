@@ -124,7 +124,7 @@ $   old_parse = f$getjpi("", "parse_style_perm")
 $   set process/parse=extended
 $endif
 $!
-$old_cutils = "sed,awk,"
+$old_cutils = "sed"
 $!
 $!
 $ i = 0
@@ -140,11 +140,7 @@ $!
 $!
 $if .not. VAX
 $then
-$   file = "gnv$gnu:[usr.share.man.cat1]awk^.1.gz"
-$   if f$search(file) .nes. "" then delete 'file';*
 $   file = "gnv$gnu:[usr.share.man.cat1]sed^.1.gz"
-$   if f$search(file) .nes. "" then delete 'file';*
-$   file = "gnv$gnu:[usr.share.man.cat1]iawk^.1.gz"
 $   if f$search(file) .nes. "" then delete 'file';*
 $endif
 $!

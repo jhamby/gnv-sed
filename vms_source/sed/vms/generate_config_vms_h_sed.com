@@ -1,11 +1,10 @@
-$! File: GENERATE_CONFIG_H_VMS_SED.COM
+$! File: generate_config_h_vms_sed.com
 $!
 $! Sed like most open source products uses a variant of a config.h file.
-$! Depending on the curl version, this could be config.h or curl_config.h.
 $!
 $! For GNV based builds, the configure script is run and that produces
-$! a [curl_]config.h file.  Configure scripts on VMS generally do not
-$! know how to do everything, so there is also a [-.lib]config-vms.h file
+$! a config.h file.  Configure scripts on VMS generally do not
+$! know how to do everything, so there is also a config-vms.h file
 $! that has VMS specific code that compensates for bugs in some of the
 $! VMS shared images.
 $!

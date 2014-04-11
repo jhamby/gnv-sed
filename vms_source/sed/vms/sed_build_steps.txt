@@ -52,10 +52,6 @@ unless on VAX, where either an NFS or ODS-2 volume can be used.
 SRC_ROOT: is for the source files common to all platforms.  This can be a
           read only copy of the files from a change control repository.
 
-          In my build environment, the TRUNK_ROOT:[sed] is the
-          same directory as src_root:[sed].  TRUNK_ROOT:[sed] is a
-          checkout of the sed repository used for the build.
-
 VMS_ROOT: is for the files that were changed from the repository copy of
           SRC_ROOT:
 
@@ -175,9 +171,9 @@ use record mode reads instead of the default character reads.  Examine the
 source for more details.  These extra images are not added to the resulting
 PCSI kit.
 
-To clean up after a build to start over, run mmk with the target spotless.
+To clean up after a build to start over, run mmk with the target realclean.
 
-   $ mmk/descrip=[.vms]descrip.mms realclean
+   $ mmk/descrip=[.vms]sed.mms realclean
 
 The files are installed into a NEW_GNU directory for staging by running the
 procedure stage_sed_install.com.  This copies the binaries and creates
