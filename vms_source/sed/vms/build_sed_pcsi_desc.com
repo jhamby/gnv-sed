@@ -409,11 +409,6 @@ $!
 $flst_loop_end:
 $ close flst
 $!
-$!   Add Link alias procedure file (N/A for sed)
-$!-----------------------------------------------------
-$ write pdsc "   file ""[vms_bin]sed_alias_setup.com"""
-$ write pdsc "     source [vms_bin]sed_alias_setup.com ;"
-$!
 $!   Add [.SYS$STARTUP]sed_startup file
 $!---------------------------------------
 $ write pdsc "   file ""[sys$startup]gnv$sed_startup.com"""
