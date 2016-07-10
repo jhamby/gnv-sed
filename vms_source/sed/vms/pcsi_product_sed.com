@@ -159,19 +159,9 @@ $product package 'product_name' -
  /format=sequential 'pcsi_option'
 $!
 $!
-$! VAX can not do a compressed kit.
-$! ZIP -9 "-V" does a better job, so no reason to normally build a compressed
-$! kit.
-$!----------------------------------
-$if p1 .eqs. "COMPRESSED"
+$if f$type(zip) .eqs. "STRING"
 $then
-$   if arch_code .nes. "V"
-$   then
-$       product copy /options=(novalidate, noconfirm) /format=compressed -
-        'product_name' -
-        /source=stage_root:[kit]/dest=stage_root:[kit] -
-        /version='version'/base='base'
-$   endif
+$   zip "-9Vj" stage_root:[kit]'kit_name'.zip stage_root:[kit]'kit_name'.pcsi
 $endif
 $!
 $all_exit:

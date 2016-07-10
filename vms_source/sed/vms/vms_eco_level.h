@@ -23,6 +23,6 @@
 #ifndef _VMS_ECO_LEVEL_H
 #define _VMS_ECO_LEVEL_H
 
-#define VMS_ECO_LEVEL "2"
+#define VMS_ECO_LEVEL "3"
 
 #endif
